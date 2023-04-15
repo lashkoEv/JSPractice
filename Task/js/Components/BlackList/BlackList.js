@@ -1,12 +1,5 @@
 //   - модуль составления черного списка
 
-// Кого увольнять:
-// - всех у кого фамилия из черного списка
-// - черный список формируете сами, взяв любых 3х человек на рандом
-//   - если срандомится одна и та же фамилия или ее отсутсвие - так и оставляете(может так срандомить, что черный список будет пустым - это ok)
-// - всех у кого есть хомяки в домашних животных
-// - всех у кого зарплата в фунтах или евро
-
 export const getBackList = (data) => {
   const surnames = getSurnames(data);
 
@@ -15,6 +8,7 @@ export const getBackList = (data) => {
   data.forEach((employee) => {
     surnames.forEach((surname) => {
       if (employee.name.match(new RegExp(surname))) {
+        employee.isName = true;
         backList.push(employee);
       }
     });
@@ -27,10 +21,12 @@ export const getBackList = (data) => {
       !backList.includes(employee);
 
     if (isHaveHamster) {
+      employee.isPet = true;
       backList.push(employee);
     }
 
     if (isSalaryInEuroOrPound) {
+      employee.isSalary = true;
       backList.push(employee);
     }
   });
