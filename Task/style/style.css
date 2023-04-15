@@ -50,6 +50,7 @@ section {
   align-items: center;
   border-radius: 100%;
   margin-right: 0.5rem;
+  font-weight: 600;
 }
 
 .employees {
@@ -94,6 +95,7 @@ section {
 .value {
   padding: 0.5rem;
   border: 1px solid rgba(143, 143, 143, 0.5);
+  border-radius: 0.5rem;
   width: 70%;
 }
 
