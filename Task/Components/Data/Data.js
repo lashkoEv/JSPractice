@@ -1,6 +1,8 @@
 //   - модуль данных рабочих (там только константа с массивом)
 
-[
+"use strict";
+
+export const data = [
   "Name: Pit Manson, salary: 168$, pets: parrot",
   "Name: Sandra Manson, salary: 300₽, pets: none",
   "Name: Samon, salary: 220₽, pets: cat",
